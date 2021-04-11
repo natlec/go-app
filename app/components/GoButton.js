@@ -2,24 +2,31 @@ import React from 'react';
 import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 
 import GoColors from '../config/GoColors';
+import GoFonts from '../config/GoFonts';
 
 function GoButton({ text, backgroundColor = "white", color = "black", onPress }) {
   return (
-    <TouchableOpacity onPress={onPress}>
-      <View style={[styles.button, { backgroundColor: GoColors[backgroundColor] }]}>
+    <View style={styles.container}>
+      <TouchableOpacity style={[styles.button, { backgroundColor: GoColors[backgroundColor] }]} onPress={onPress}>
         <Text style={[styles.text, { color: GoColors[color] }]}>
           {text}
         </Text>
-      </View>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    marginVertical: 8,
+    justifyContent: 'center',
+    alignItems: 'stretch',
+  },
   button: {
     backgroundColor: GoColors.white,
     borderRadius: 12,
-    width: '100%',
+    height: 72,
     padding: 24,
     justifyContent: 'center',
     alignItems: 'center',
@@ -28,7 +35,7 @@ const styles = StyleSheet.create({
     color: GoColors.black,
     fontSize: 18,
     lineHeight: 21,
-    fontFamily: 'WorkSans_700Bold',
+    fontFamily: GoFonts.bold,
   },
 })
 

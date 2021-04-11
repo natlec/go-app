@@ -1,15 +1,15 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import GoColors from '../../config/GoColors';
-import GoButton from '../../components/GoButton';
 import GoScreen from '../../components/GoScreen';
+import GoHeader from '../../components/GoHeader';
+import GoButton from '../../components/GoButton';
 
 function TripsScreen({ navigation }) {
   return (
     <GoScreen>
       <View style={styles.container}>
-        <Text style={styles.text}>Trips Screen</Text>
+        <GoHeader icon="explore" title="Trips" />
         <GoButton text="View Trips" onPress={() => navigation.navigate('TripView')} />
       </View>
     </GoScreen>
@@ -20,9 +20,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  text: {
-    color: GoColors.white
   }
 })
 

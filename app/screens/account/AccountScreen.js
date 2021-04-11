@@ -1,16 +1,16 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import GoColors from '../../config/GoColors';
-import GoButton from '../../components/GoButton';
 import GoScreen from '../../components/GoScreen';
+import GoHeader from '../../components/GoHeader';
+import GoButton from '../../components/GoButton';
 
 function AccountScreen({ navigation }) {
   return (
     <GoScreen>
       <View style={styles.container}>
-        <Text style={styles.text}>Account Screen</Text>
-        <GoButton text="View Trips" onPress={() => navigation.navigate('Trips')} />
+        <GoHeader icon="account-circle" title="Account" />
+        <GoButton text="Logout" color="white" backgroundColor="orange" onPress={() => navigation.navigate('Login')} />
       </View>
     </GoScreen>
   );
@@ -20,9 +20,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  text: {
-    color: GoColors.white
   }
 })
 

@@ -5,8 +5,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import GoTabBar from '../components/GoTabBar';
 import TripsNavigator from './TripsNavigator';
-import AddTripScreen from '../screens/trips/AddTripScreen';
 import AccountNavigator from './AccountNavigator';
+import AddTripScreen from '../screens/trips/AddTripScreen';
 
 const AppTab = createBottomTabNavigator();
 
