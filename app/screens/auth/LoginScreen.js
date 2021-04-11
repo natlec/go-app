@@ -18,32 +18,38 @@ function LoginScreen({ navigation }) {
   const commonData = GoData.getInstance();
 
   const schema = Yup.object().shape({
-    username: Yup.string().required().label("Username"),
-    password: Yup.string().required().min(4).max(256).label("Password"),
+    username: Yup.string().required().label('Username'),
+    password: Yup.string().required().min(4).max(256).label('Password'),
   });
 
   const createUsersTable = useCallback(async () => {
     await GoUser.createTable();
   });
 
-  const loginUser = async (username, password) => {
-    const user = await GoUser.findBy({ username_eq: username });
+  const loginUser = async (user) => {
     if (!user) {
-      alert('Error: Failed to login, no user exists with that username.');
+      alert('Error: Failed to login user, no user details provided.');
       return;
     } else {
-      // Run password through same SHA384 hashing algorithm
-      const passwordHash = await Crypto.digestStringAsync(
-        Crypto.CryptoDigestAlgorithm.SHA384,
-        password
-      );
-
-      if (user.password !== passwordHash) {
-        alert('Error: Failed to login, incorrect password.');
+      const existingUser = await GoUser.findBy({ username_eq: user.username });
+      if (!existingUser) {
+        alert('Error: Failed to login, no user exists with that username.');
         return;
       } else {
-        commonData.setUser(user);
-        commonData.setLoggedIn(true);
+        // Run password through same SHA384 hashing algorithm
+        const passwordHash = await Crypto.digestStringAsync(
+          Crypto.CryptoDigestAlgorithm.SHA384,
+          user.password
+        );
+
+        if (existingUser.password !== passwordHash) {
+          alert('Error: Failed to login, incorrect password.');
+          return;
+        } else {
+          commonData.setUser(existingUser);
+          commonData.setLoggedIn(true);
+          navigation.navigate('Trips');
+        }
       }
     }
   };
@@ -57,11 +63,8 @@ function LoginScreen({ navigation }) {
           initialValues={{ username: '', password: '', }}
           onSubmit={(values, { resetForm }) => {
             createUsersTable();
-            loginUser(values.username, values.password).then(() => {
-              if (commonData.getLoggedIn()) {
-                navigation.navigate('Trips');
-                resetForm();
-              }
+            loginUser(values).then(() => {
+              resetForm();
             });
           }}
           validationSchema={schema}

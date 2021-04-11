@@ -18,30 +18,36 @@ function RegisterScreen({ navigation }) {
   const commonData = GoData.getInstance();
 
   const schema = Yup.object().shape({
-    email: Yup.string().required().email().label("Email"),
-    username: Yup.string().required().label("Username"),
-    password: Yup.string().required().min(4).max(256).label("Password"),
+    email: Yup.string().required().email().label('Email'),
+    username: Yup.string().required().label('Username'),
+    password: Yup.string().required().min(4).max(256).label('Password'),
   });
 
   const createUsersTable = useCallback(async () => {
     await GoUser.createTable();
   });
 
-  const registerUser = async (email, username, password) => {
-    const existingUser = await GoUser.findBy({ username_eq: username });
-    if (existingUser) {
-      alert('Error: Failed to register, the username is already in use.');
+  const registerUser = async (user) => {
+    if (!user) {
+      alert('Error: Failed to register user, no user details provided.');
       return;
     } else {
-      // Store password as SHA384 hash
-      const passwordHash = await Crypto.digestStringAsync(
-        Crypto.CryptoDigestAlgorithm.SHA384,
-        password
-      );
-      const user = { email, username, password: passwordHash };
-      await GoUser.create(user);
-      commonData.setUser(user);
-      commonData.setLoggedIn(true);
+      const existingUser = await GoUser.findBy({ username_eq: user.username });
+      if (existingUser) {
+        alert('Error: Failed to register, the username is already in use.');
+        return;
+      } else {
+        // Store password as SHA384 hash
+        const passwordHash = await Crypto.digestStringAsync(
+          Crypto.CryptoDigestAlgorithm.SHA384,
+          user.password
+        );
+        const newUser = { email: user.email, username: user.username, password: passwordHash };
+        await GoUser.create(newUser);
+        commonData.setUser(newUser);
+        commonData.setLoggedIn(true);
+        navigation.navigate('Trips');
+      }
     }
   };
 
@@ -54,9 +60,8 @@ function RegisterScreen({ navigation }) {
           initialValues={{ email: '', username: '', password: '', }}
           onSubmit={(values, { resetForm }) => {
             createUsersTable();
-            registerUser(values.email, values.username, values.password).then(() => {
+            registerUser(values).then(() => {
               if (commonData.getLoggedIn()) {
-                navigation.navigate('Trips');
                 resetForm();
               }
             });

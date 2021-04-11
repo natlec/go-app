@@ -21,17 +21,19 @@ function GoTabBar({ state, descriptors, navigation }) {
 
   // Style tab bar (contained inside function to allow setting tabWidth)
   const styles = StyleSheet.create({
-    tabBar: {
+    container: {
       position: 'absolute',
-      height: 96,
       left: 0,
       right: 0,
       bottom: 0,
-      padding: 8,
       elevation: 2,
+    },
+    tabBar: {
+      height: 96,
+      padding: 8,
+      backgroundColor: 'rgba(16, 11, 10, 0.85)',
       flexDirection: 'row',
       alignItems: 'center',
-      backgroundColor: 'rgba(16, 11, 10, 0.95)',
     },
     tabButton: {
       flex: 1,
@@ -65,61 +67,64 @@ function GoTabBar({ state, descriptors, navigation }) {
   })
 
   return (
-    <BlurView intensity={100} tint="dark" style={styles.tabBar}>
+    <BlurView intensity={100} tint="dark" style={styles.container}>
+      <View style={styles.tabBar}>
 
-      {/* Tab button active state object */}
-      <View style={StyleSheet.absoluteFillObject}>
-        <Animated.View style={[styles.tabButtonActive, { width: tabWidth, transform: [{ translateX: translateValue }] }]}>
-          <View style={styles.tabButtonActiveInner} />
-        </Animated.View>
+        {/* Tab button active state object */}
+        <View style={StyleSheet.absoluteFillObject}>
+          <Animated.View style={[styles.tabButtonActive, { width: tabWidth, transform: [{ translateX: translateValue }] }]}>
+            <View style={styles.tabButtonActiveInner} />
+          </Animated.View>
+        </View>
+
+        {/* Render all tab buttons */}
+        {routes.map((route, routeIndex) => {
+          const { options } = descriptors[route.key];
+          const label =
+            options.tabBarLabel !== undefined
+              ? options.tabBarLabel
+              : options.title !== undefined
+                ? options.title
+                : route.name;
+          const icon = options.tabBarIcon;
+          const isRouteActive = routeIndex === activeRouteIndex;
+          const tintColor = isRouteActive ? GoColors.orange : GoColors.white;
+
+          const onPress = () => {
+            const event = navigation.emit({
+              type: 'tabPress',
+              target: route.key,
+            });
+
+            if (!isRouteActive && !event.defaultPrevented) {
+              navigation.navigate(route.name);
+            }
+          };
+
+          const onLongPress = () => {
+            navigation.emit({
+              type: 'tabLongPress',
+              target: route.key,
+            });
+          };
+
+          return (
+            <TouchableOpacity
+              key={routeIndex}
+              style={styles.tabButton}
+              onPress={onPress}
+              onLongPress={onLongPress}
+              accessibilityLabel={options.tabBarAccessibilityLabel}
+            >
+              {icon({ tintColor })}
+              <Text style={styles.tabButtonText}>
+                {label}
+              </Text>
+            </TouchableOpacity>
+          );
+        })}
+
       </View>
-
-      {/* Render all tab buttons */}
-      {routes.map((route, routeIndex) => {
-        const { options } = descriptors[route.key];
-        const label =
-          options.tabBarLabel !== undefined
-            ? options.tabBarLabel
-            : options.title !== undefined
-              ? options.title
-              : route.name;
-        const icon = options.tabBarIcon;
-        const isRouteActive = routeIndex === activeRouteIndex;
-        const tintColor = isRouteActive ? GoColors.orange : GoColors.white;
-
-        const onPress = () => {
-          const event = navigation.emit({
-            type: 'tabPress',
-            target: route.key,
-          });
-
-          if (!isRouteActive && !event.defaultPrevented) {
-            navigation.navigate(route.name);
-          }
-        };
-
-        const onLongPress = () => {
-          navigation.emit({
-            type: 'tabLongPress',
-            target: route.key,
-          });
-        };
-
-        return (
-          <TouchableOpacity
-            key={routeIndex}
-            style={styles.tabButton}
-            onPress={onPress}
-            onLongPress={onLongPress}
-            accessibilityLabel={options.tabBarAccessibilityLabel}
-          >
-            {icon({ tintColor })}
-            <Text style={styles.tabButtonText}>
-              {label}
-            </Text>
-          </TouchableOpacity>
-        );
-      })}
     </BlurView>
   );
 }
