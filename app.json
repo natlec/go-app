@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Go",
+    "description": "A simple logbook for the places you've been or would like to go.",
     "slug": "go-app",
     "githubUrl": "https://github.com/natlec/go-app",
     "version": "1.0.0",

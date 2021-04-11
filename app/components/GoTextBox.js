@@ -5,27 +5,23 @@ import GoColors from '../config/GoColors';
 import GoFonts from '../config/GoFonts';
 
 function GoTextBox({ label, placeholder = "", ...otherProps }) {
-  const [value, onChangeText] = useState('');
-
   return (
     <View style={styles.container}>
       <View style={styles.textbox}>
         {/* TextBox Label */}
-        {label && value !== '' &&
+        {label && otherProps.value !== '' &&
           <Text style={styles.label}>
             {label}
           </Text>}
 
         {/* TextBox placeholder */}
-        {value === '' &&
+        {otherProps.value === '' &&
           <Text style={styles.placeholder}>
             {placeholder}
           </Text>}
 
         {/* TextBox input */}
         <TextInput
-          value={value}
-          onChangeText={text => onChangeText(text)}
           style={styles.input}
           {...otherProps}
         />
