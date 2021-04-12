@@ -30,7 +30,7 @@ function TripsScreen({ navigation }) {
         <GoHeader icon="explore" title="Trips" />
 
         {/* Categories available for filtering */}
-        {(commonData.getTrips().length > 0)
+        {(commonData.getTrips().filter(trip => trip.creator === commonData.getUser().username).length > 0)
           ? <GoFilter filters={commonData.getCategories()} selectedFilter={categoryFilter} setFilter={setCategoryFilter} />
           : <Text style={styles.statusText}>No trips in your account, try adding some!</Text>}
 
