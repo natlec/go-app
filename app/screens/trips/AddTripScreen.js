@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, StyleSheet } from 'react-native';
 
-import { Formik } from 'formik';
+import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
 
 import GoTrip from '../../config/data/GoTrip';
@@ -75,7 +75,7 @@ function AddTripScreen({ navigation }) {
           }}
           validationSchema={schema}
         >
-          {({ values, handleChange, handleSubmit, errors, setFieldValue, setFieldTouched }) => (
+          {({ values, handleChange, handleSubmit, errors, setFieldTouched }) => (
             <>
               <GoTextBox
                 label="Name"
@@ -91,19 +91,21 @@ function AddTripScreen({ navigation }) {
                 onBlur={() => setFieldTouched('address')}
                 onChangeText={handleChange('address')}
               />
-              <GoPicker
+              <Field
+                name="category"
+                component={GoPicker}
                 label="Category"
                 placeholder="Category"
                 values={commonData.getCategories()}
-                selectedValue={values.category}
-                setFieldValue={setFieldValue}
+                value={values.category}
               />
-              <GoPicker
+              <Field
+                name="cost"
+                component={GoPicker}
                 label="Cost"
                 placeholder="Cost"
                 values={commonData.getCosts()}
-                selectedValue={values.cost}
-                setFieldValue={setFieldValue}
+                value={values.cost}
               />
               <GoTextBox
                 label="WiFi Password"

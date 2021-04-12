@@ -1,32 +1,18 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
-
-import { MaterialIcons } from '@expo/vector-icons';
+import { Text, StyleSheet, View } from 'react-native';
 
 import GoColors from '../config/GoColors';
 import GoFonts from '../config/GoFonts';
 
-function GoCardListItem({ label, value, action }) {
+function GoCardListItem({ label, value }) {
   return (
     <View style={styles.container}>
-      {label &&
-        <Text style={styles.label}>
-          {label}
-        </Text>}
-      <View style={styles.valueContainer}>
-        {value &&
-          <Text style={styles.value}>
-            {value}
-          </Text>}
-        {action &&
-          <TouchableOpacity style={styles.action} onPress={action.onPress}>
-            <MaterialIcons
-              style={styles.actionIcon}
-              name={action.icon}
-              size={18}
-              color={GoColors.gray} />
-          </TouchableOpacity>}
-      </View>
+      <Text style={styles.label}>
+        {label}
+      </Text>
+      <Text style={styles.value}>
+        {value}
+      </Text>
     </View>
   );
 }
@@ -47,10 +33,6 @@ const styles = StyleSheet.create({
     fontFamily: GoFonts.semibold,
     fontSize: 16,
     lineHeight: 18,
-  },
-  valueContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
   },
   value: {
     color: GoColors.gray,

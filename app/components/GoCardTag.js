@@ -26,13 +26,15 @@ function GoCardTag({ label, icon }) {
 const styles = StyleSheet.create({
   container: {
     marginRight: 8,
-    alignItems: 'center'
+    alignItems: 'center',
+    flexDirection: 'row'
   },
   tagLabel: {
     color: GoColors.gray,
     fontFamily: GoFonts.semibold,
     fontSize: 14,
     lineHeight: 16,
+    marginLeft: 8,
   }
 })
 

@@ -6,8 +6,8 @@ import GoCardListItem from './GoCardListItem';
 function GoCardList({ items }) {
   return (
     <View style={styles.container}>
-      {items.map((item, idx) =>
-        <GoCardListItem key={idx} label={item.label} value={item.value} action={item.action} />
+      {items.filter(item => item !== undefined).map((item, idx) =>
+        <GoCardListItem key={idx} label={item.label} value={item.value} />
       )}
     </View>
   );

@@ -45,11 +45,10 @@ function TripsScreen({ navigation }) {
               subtitle={trip.address}
               iconRight="arrow-forward-ios"
               tags={[
-                { icon: commonData.getCategory(trip.category) },
-                { icon: commonData.getCost(trip.cost) },
-                { icon: 'wifi' }
+                { icon: commonData.getCategory(trip.category), label: trip.category }
               ]}
               onPress={() => {
+                { console.log(trip) }
                 commonData.setTripView(trip);
                 navigation.navigate('TripView');
               }}

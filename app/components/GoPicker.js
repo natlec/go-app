@@ -9,8 +9,7 @@ import GoScreen from './GoScreen';
 import GoButton from './GoButton';
 import GoCard from './GoCard';
 
-function GoPicker({ label, values, selectedValue, setFieldValue }) {
-  const [value, setValue] = useState(selectedValue);
+function GoPicker({ label, values, value, field, form, ...props }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -53,8 +52,7 @@ function GoPicker({ label, values, selectedValue, setFieldValue }) {
                     backgroundColor={(value === valueLabel ? 'orange' : 'lightgray')}
                     onPress={() => {
                       setModalVisible(false);
-                      setValue(valueLabel);
-                      setFieldValue(valueLabel);
+                      form.setFieldValue(field.name, valueLabel);
                     }}
                   />
                 )}
