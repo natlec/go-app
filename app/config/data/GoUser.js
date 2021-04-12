@@ -7,7 +7,7 @@ export default class User extends BaseModel {
   }
 
   static get database() {
-    return async () => SQLite.openDatabase('database.db')
+    return async () => SQLite.openDatabase('gousers.db')
   }
 
   static get tableName() {
@@ -17,7 +17,7 @@ export default class User extends BaseModel {
   static get columnMapping() {
     return {
       id: { type: types.INTEGER, primary_key: true },
-      username: { type: types.TEXT, not_null: true },
+      username: { type: types.TEXT, not_null: true, unique: true },
       password: { type: types.TEXT, not_null: true },
       email: { type: types.TEXT, not_null: true }
     }

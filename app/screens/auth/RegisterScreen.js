@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React from 'react';
+import { Text, ScrollView, StyleSheet } from 'react-native';
 
 import * as Crypto from 'expo-crypto';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
+import GoTrip from '../../config/data/GoTrip';
 import GoUser from '../../config/data/GoUser';
 import GoData from '../../config/GoData';
 import GoColors from '../../config/GoColors';
@@ -20,11 +21,7 @@ function RegisterScreen({ navigation }) {
   const schema = Yup.object().shape({
     email: Yup.string().required().email().label('Email'),
     username: Yup.string().required().label('Username'),
-    password: Yup.string().required().min(4).max(256).label('Password'),
-  });
-
-  const createUsersTable = useCallback(async () => {
-    await GoUser.createTable();
+    password: Yup.string().required().min(8).max(256).label('Password'),
   });
 
   const registerUser = async (user) => {
@@ -44,6 +41,8 @@ function RegisterScreen({ navigation }) {
         );
         const newUser = { email: user.email, username: user.username, password: passwordHash };
         await GoUser.create(newUser);
+        commonData.setTrips(await GoTrip.query());
+        console.log(newUser);
         commonData.setUser(newUser);
         commonData.setLoggedIn(true);
         navigation.navigate('Trips');
@@ -53,13 +52,12 @@ function RegisterScreen({ navigation }) {
 
   return (
     <GoScreen>
-      <View style={styles.container}>
+      <ScrollView keyboardShouldPersistTaps="always" contentContainerStyle={styles.container}>
         <GoHeader icon="account-circle" title="Register" />
 
         <Formik
-          initialValues={{ email: '', username: '', password: '', }}
+          initialValues={{ email: '', username: '', password: '' }}
           onSubmit={(values, { resetForm }) => {
-            createUsersTable();
             registerUser(values).then(() => {
               if (commonData.getLoggedIn()) {
                 resetForm();
@@ -105,13 +103,15 @@ function RegisterScreen({ navigation }) {
 
         <Text style={styles.orSplit}>OR</Text>
         <GoButton text="Login" onPress={() => navigation.navigate('Login')} />
-      </View>
+      </ScrollView>
     </GoScreen>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    padding: 24,
+    paddingBottom: 96,
     justifyContent: 'center',
     alignItems: 'center',
   },

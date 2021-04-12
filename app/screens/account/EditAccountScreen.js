@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
 import * as Crypto from 'expo-crypto';
 import { Formik } from 'formik';
@@ -30,9 +30,9 @@ function EditAccountScreen({ navigation }) {
       return;
     } else {
       const existingUser = await GoUser.findBy({ username_eq: user.username });
-      if (existingUser) {
+      if (!existingUser) {
         alert('Error: Failed to edit user, the user does not exist.');
-        navigation.navigate('login');
+        navigation.navigate('Login');
         commonData.setLoggedIn(false);
         return;
       } else {
@@ -51,7 +51,7 @@ function EditAccountScreen({ navigation }) {
 
   return (
     <GoScreen>
-      <View style={styles.container}>
+      <ScrollView keyboardShouldPersistTaps="always" contentContainerStyle={styles.container}>
         <GoCard
           title={commonData.getUser().username}
           subtitle={commonData.getUser().email}
@@ -80,7 +80,6 @@ function EditAccountScreen({ navigation }) {
                 placeholder="Email"
                 textContentType="emailAddress"
                 autoCompleteType="email"
-                autoFocus={true}
                 autoCapitalize="none"
                 value={values.email}
                 onBlur={() => setFieldTouched('email')}
@@ -116,13 +115,15 @@ function EditAccountScreen({ navigation }) {
             </>
           )}
         </Formik>
-      </View>
+      </ScrollView>
     </GoScreen>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    padding: 24,
+    paddingBottom: 96,
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -1,12 +1,13 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, FlatList, View } from 'react-native';
 
 import { MaterialIcons } from '@expo/vector-icons';
 
 import GoColors from '../config/GoColors';
 import GoFonts from '../config/GoFonts';
+import GoCardTagList from './GoCardTagList';
 
-function GoCard({ children, title, subtitle, iconLeft, iconRight, onPress }) {
+function GoCard({ children, title, subtitle, tags, iconLeft, iconRight, onPress }) {
   return (
     <View style={styles.container}>
 
@@ -20,6 +21,7 @@ function GoCard({ children, title, subtitle, iconLeft, iconRight, onPress }) {
             <Text style={styles.subtitle}>
               {subtitle}
             </Text>
+            {tags && <GoCardTagList tags={tags} />}
           </View>
           {iconRight && <MaterialIcons style={styles.iconRight} name={iconRight} size={24} color={GoColors.black} />}
         </View>
@@ -76,8 +78,8 @@ const styles = StyleSheet.create({
     marginLeft: 16,
   },
   children: {
-    padding: 24,
-  },
+    width: '100%',
+  }
 })
 
 export default GoCard;

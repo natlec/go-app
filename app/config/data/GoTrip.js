@@ -7,7 +7,7 @@ export default class Trip extends BaseModel {
   }
 
   static get database() {
-    return async () => SQLite.openDatabase('database.db')
+    return async () => SQLite.openDatabase('gotrips.db')
   }
 
   static get tableName() {

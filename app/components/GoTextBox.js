@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Text, TextInput, StyleSheet, View } from 'react-native';
 
 import GoColors from '../config/GoColors';

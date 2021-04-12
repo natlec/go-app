@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React from 'react';
+import { Text, ScrollView, StyleSheet } from 'react-native';
 
 import * as Crypto from 'expo-crypto';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
+import GoTrip from '../../config/data/GoTrip';
 import GoUser from '../../config/data/GoUser';
 import GoData from '../../config/GoData';
 import GoColors from '../../config/GoColors';
@@ -19,11 +20,7 @@ function LoginScreen({ navigation }) {
 
   const schema = Yup.object().shape({
     username: Yup.string().required().label('Username'),
-    password: Yup.string().required().min(4).max(256).label('Password'),
-  });
-
-  const createUsersTable = useCallback(async () => {
-    await GoUser.createTable();
+    password: Yup.string().required().min(8).max(256).label('Password'),
   });
 
   const loginUser = async (user) => {
@@ -46,6 +43,8 @@ function LoginScreen({ navigation }) {
           alert('Error: Failed to login, incorrect password.');
           return;
         } else {
+          commonData.setTrips(await GoTrip.query());
+          console.log(existingUser);
           commonData.setUser(existingUser);
           commonData.setLoggedIn(true);
           navigation.navigate('Trips');
@@ -56,13 +55,12 @@ function LoginScreen({ navigation }) {
 
   return (
     <GoScreen>
-      <View style={styles.container}>
+      <ScrollView keyboardShouldPersistTaps="always" contentContainerStyle={styles.container}>
         <GoHeader icon="account-circle" title="Login" />
 
         <Formik
-          initialValues={{ username: '', password: '', }}
+          initialValues={{ username: '', password: '' }}
           onSubmit={(values, { resetForm }) => {
-            createUsersTable();
             loginUser(values).then(() => {
               resetForm();
             });
@@ -96,13 +94,15 @@ function LoginScreen({ navigation }) {
 
         <Text style={styles.orSplit}>OR</Text>
         <GoButton text="Register" onPress={() => navigation.navigate('Register')} />
-      </View>
+      </ScrollView>
     </GoScreen>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    padding: 24,
+    paddingBottom: 96,
     justifyContent: 'center',
     alignItems: 'center',
   },

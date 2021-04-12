@@ -9,14 +9,12 @@ import GoColors from '../config/GoColors';
 function GoScreen({ children, style }) {
   return (
     <SafeAreaView style={[styles.screen, style]}>
-      <ScrollView>
-        <ImageBackground
-          source={require('../assets/topo-background.png')}
-          style={styles.background}>
-          {children}
-        </ImageBackground>
-        <StatusBar style="light" />
-      </ScrollView>
+      <ImageBackground
+        source={require('../assets/topo-background.png')}
+        style={styles.background}>
+        {children}
+      </ImageBackground>
+      <StatusBar style="light" />
     </SafeAreaView>
   );
 }
@@ -30,8 +28,6 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     alignItems: 'stretch',
-    padding: 24,
-    paddingBottom: 120,
   }
 })
 
