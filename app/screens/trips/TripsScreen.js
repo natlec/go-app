@@ -48,7 +48,6 @@ function TripsScreen({ navigation }) {
                 { icon: commonData.getCategory(trip.category), label: trip.category }
               ]}
               onPress={() => {
-                { console.log(trip) }
                 commonData.setTripView(trip);
                 navigation.navigate('TripView');
               }}

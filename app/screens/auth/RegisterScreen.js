@@ -21,7 +21,9 @@ function RegisterScreen({ navigation }) {
   const schema = Yup.object().shape({
     email: Yup.string().required().email().label('Email'),
     username: Yup.string().required().label('Username'),
-    password: Yup.string().required().min(8).max(256).label('Password'),
+    password: Yup.string().required().min(4).max(256).label('Password'),
+    confirmPassword: Yup.string().required().min(4).max(256)
+      .oneOf([Yup.ref('password'), null]).label('Confirm Password'),
   });
 
   const registerUser = async (user) => {
@@ -56,7 +58,7 @@ function RegisterScreen({ navigation }) {
         <GoHeader icon="account-circle" title="Register" />
 
         <Formik
-          initialValues={{ email: '', username: '', password: '' }}
+          initialValues={{ email: '', username: '', password: '', confirmPassword: '' }}
           onSubmit={(values, { resetForm }) => {
             registerUser(values).then(() => {
               if (commonData.getLoggedIn()) {
@@ -95,6 +97,15 @@ function RegisterScreen({ navigation }) {
                 value={values.password}
                 onBlur={() => setFieldTouched('password')}
                 onChangeText={handleChange('password')}
+              />
+              <GoTextBox
+                label="Confirm Password"
+                placeholder="Confirm Password"
+                textContentType="password"
+                secureTextEntry={true}
+                value={values.confirmPassword}
+                onBlur={() => setFieldTouched('confirmPassword')}
+                onChangeText={handleChange('confirmPassword')}
               />
               <GoButton text="Register" color="white" backgroundColor="orange" onPress={handleSubmit} />
             </>

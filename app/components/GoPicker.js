@@ -32,7 +32,7 @@ function GoPicker({ label, values, value, field, form, ...props }) {
         </TouchableWithoutFeedback>
 
         {/* Picker modal */}
-        <Modal visible={modalVisible} animationType="slide">
+        <Modal visible={modalVisible} animationType="slide" onRequestClose={() => setModalVisible(false)}>
           <GoScreen>
             <ScrollView keyboardShouldPersistTaps="always" contentContainerStyle={styles.modalContainer}>
               <GoCard
