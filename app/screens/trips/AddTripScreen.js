@@ -61,8 +61,8 @@ function AddTripScreen({ navigation }) {
           initialValues={{
             name: '',
             address: '',
-            category: 'All',
-            cost: 'Affordable',
+            category: Object.keys(commonData.getCategories())[0],
+            cost: Object.keys(commonData.getCosts())[0],
             wifiPassword: '',
             website: '',
             email: '',
@@ -109,7 +109,7 @@ function AddTripScreen({ navigation }) {
                 label="WiFi Password"
                 placeholder="WiFi Password"
                 textContentType="password"
-                secureTextEntry={true}
+                autoCapitalize="none"
                 value={values.wifiPassword}
                 onChangeText={handleChange('wifiPassword')}
               />

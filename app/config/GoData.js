@@ -7,16 +7,15 @@ export default class GoData {
   trips = [];
   tripView = {};
   categories = {
-    'All': 'explore',
+    'General': 'explore',
     'Restaurant': 'local-restaurant',
     'Cafe': 'local-cafe',
     'Hotel': 'hotel'
   };
   costs = {
-    'Very Affordable': '$',
-    'Affordable': '$-$$',
-    'Expensive': '$$-$$$',
-    'Very Expensive': '$$$+'
+    'Affordable': 'attach-money',
+    'Reasonable': 'attach-money',
+    'Expensive': 'attach-money'
   };
 
   static getInstance() {

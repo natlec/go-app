@@ -48,11 +48,12 @@ function GoPicker({ label, values, selectedValue, setFieldValue }) {
                     key={valueLabel}
                     style={styles.inputValue}
                     text={valueLabel}
+                    icon={valueIcon}
                     color={(value === valueLabel ? 'white' : 'black')}
                     backgroundColor={(value === valueLabel ? 'orange' : 'lightgray')}
                     onPress={() => {
                       setModalVisible(false);
-                      setValue(valueLabel)
+                      setValue(valueLabel);
                       setFieldValue(valueLabel);
                     }}
                   />

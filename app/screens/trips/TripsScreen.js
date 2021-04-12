@@ -1,14 +1,18 @@
 import React, { useState, useCallback } from 'react';
-import { RefreshControl, Text, View, ScrollView, StyleSheet } from 'react-native';
+import { RefreshControl, Text, ScrollView, StyleSheet } from 'react-native';
 
 import GoTrip from '../../config/data/GoTrip';
 import GoData from '../../config/GoData';
+import GoColors from '../../config/GoColors';
+import GoFonts from '../../config/GoFonts';
 import GoScreen from '../../components/GoScreen';
 import GoHeader from '../../components/GoHeader';
 import GoCard from '../../components/GoCard';
+import GoFilter from '../../components/GoFilter';
 
 function TripsScreen({ navigation }) {
   const commonData = GoData.getInstance();
+  const [categoryFilter, setCategoryFilter] = useState(Object.keys(commonData.getCategories())[0]);
   const [refreshing, setRefreshing] = useState(false);
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -25,22 +29,31 @@ function TripsScreen({ navigation }) {
       >
         <GoHeader icon="explore" title="Trips" />
 
-        {commonData.getTrips().map(trip =>
-          <GoCard
-            key={trip.id}
-            title={trip.name}
-            subtitle={trip.address}
-            iconRight="arrow-forward-ios"
-            tags={[
-              { icon: commonData.getCategory(trip.category) },
-              { label: commonData.getCost(trip.cost) },
-              { icon: 'wifi' }
-            ]}
-            onPress={() => {
-              commonData.setTripView(trip);
-              navigation.navigate('TripView');
-            }}
-          />)}
+        {/* Categories available for filtering */}
+        {(commonData.getTrips().length > 0)
+          ? <GoFilter filters={commonData.getCategories()} selectedFilter={categoryFilter} setFilter={setCategoryFilter} />
+          : <Text style={styles.statusText}>No trips in your account, try adding some!</Text>}
+
+        {/* List of trips filtered by selected category */}
+        {commonData
+          .getTrips()
+          .filter(trip => trip.category === categoryFilter && trip.creator === commonData.getUser().username)
+          .map(trip =>
+            <GoCard
+              key={trip.id}
+              title={trip.name}
+              subtitle={trip.address}
+              iconRight="arrow-forward-ios"
+              tags={[
+                { icon: commonData.getCategory(trip.category) },
+                { icon: commonData.getCost(trip.cost) },
+                { icon: 'wifi' }
+              ]}
+              onPress={() => {
+                commonData.setTripView(trip);
+                navigation.navigate('TripView');
+              }}
+            />)}
 
       </ScrollView>
     </GoScreen>
@@ -53,6 +66,14 @@ const styles = StyleSheet.create({
     paddingBottom: 96,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  statusText: {
+    textTransform: 'uppercase',
+    textAlign: 'center',
+    fontFamily: GoFonts.semibold,
+    fontSize: 14,
+    color: GoColors.lightgray,
+    margin: 48,
   }
 })
 

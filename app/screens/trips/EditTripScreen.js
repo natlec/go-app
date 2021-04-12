@@ -49,7 +49,7 @@ function EditTripScreen({ navigation }) {
         await GoTrip.update(updatedTrip);
         commonData.setTrips(await GoTrip.query());
         commonData.setTripView(updatedTrip);
-        navigation.navigate('TripView');
+        navigation.navigate('Trips');
       }
     }
   };
@@ -63,7 +63,7 @@ function EditTripScreen({ navigation }) {
           iconLeft="arrow-back-ios"
           tags={[
             { icon: commonData.getCategory(commonData.getTripView().category) },
-            { label: commonData.getCost(commonData.getTripView().cost) },
+            { icon: commonData.getCost(commonData.getTripView().cost) },
             { icon: 'wifi' }
           ]}
           onPress={() => navigation.goBack()}
@@ -121,7 +121,7 @@ function EditTripScreen({ navigation }) {
                 label="WiFi Password"
                 placeholder="WiFi Password"
                 textContentType="password"
-                secureTextEntry={true}
+                autoCapitalize="none"
                 value={values.wifiPassword}
                 onChangeText={handleChange('wifiPassword')}
               />
