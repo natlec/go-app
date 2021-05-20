@@ -1,0 +1,1743 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoButton renders correctly with available colors in config 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#100B0A",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#100B0A",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 2`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#433E3D",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#100B0A",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 3`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#F3F2F2",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#100B0A",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 4`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#100B0A",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 5`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#FF4000",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#100B0A",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 6`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#100B0A",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#433E3D",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 7`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#433E3D",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#433E3D",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 8`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#F3F2F2",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#433E3D",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 9`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#433E3D",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 10`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#FF4000",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#433E3D",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 11`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#100B0A",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#F3F2F2",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 12`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#433E3D",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#F3F2F2",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 13`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#F3F2F2",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#F3F2F2",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 14`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#F3F2F2",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 15`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#FF4000",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#F3F2F2",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 16`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#100B0A",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 17`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#433E3D",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 18`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#F3F2F2",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 19`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 20`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#FF4000",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 21`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#100B0A",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#FF4000",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 22`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#433E3D",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#FF4000",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 23`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#F3F2F2",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#FF4000",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 24`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#FF4000",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with available colors in config 25`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#FF4000",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#FF4000",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`GoButton renders correctly with optional properties not set 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "justifyContent": "center",
+      "marginVertical": 8,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "height": 72,
+            "justifyContent": "center",
+            "padding": 24,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#100B0A",
+              "fontFamily": "WorkSans_700Bold",
+              "fontSize": 18,
+              "lineHeight": 21,
+            },
+            Object {
+              "color": "#100B0A",
+            },
+          ]
+        }
+      >
+        Test
+      </Text>
+    </View>
+  </View>
+</View>
+`;

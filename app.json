@@ -19,9 +19,13 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.natlec.go",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.natlec.go",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#100B0A"

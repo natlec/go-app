@@ -5,7 +5,11 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "jest-expo"
   },
   "dependencies": {
     "@expo-google-fonts/work-sans": "^0.1.0",
@@ -39,7 +43,8 @@
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-native": "^3.10.0"
+    "eslint-plugin-react-native": "^3.10.0",
+    "jest-expo": "^41.0.0"
   },
   "private": true
 }
